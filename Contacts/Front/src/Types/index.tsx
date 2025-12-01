@@ -1,3 +1,4 @@
+import type { Value } from "react-multi-date-picker"
 
 export interface pageToggleContextInterface {
     iseformPage : boolean
@@ -13,7 +14,7 @@ export interface contact  {
     id:string,
     fullname:string,
     phon_number:string,
-    birthday:string,
+    birthday:Value,
     imgadress:string,
 }
 

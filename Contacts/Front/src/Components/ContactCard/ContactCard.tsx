@@ -42,6 +42,10 @@ function ContactCard({c}:props) {
   }
 
    async function deleteContact(id:string) {
+    const isSure = confirm("آیا از حذف کردن مخاطب مطمئن هستیدد؟");
+    if(!isSure){
+      return
+    }
     try {
       const res = await axios.delete(`http://localhost:5141/contacts/delcontact/${id}`)
       await axios.delete(`http://localhost:5141/contacts/delcontactimg/${id}`)
